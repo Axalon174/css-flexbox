@@ -1,44 +1,34 @@
 #main-header{
     background-color: #6D91D1;
-    justify-content: space-around;
+    justify-content: space-evenly;
     display: flex;
 }
-
 .profile-picture {
     border-radius: 50%;
-    width: 25vw;
-    height: 25vw;
+    width: 20vw;
+    height: 20vw;
     object-fit: cover;
-    margin: 10px;
+    margin: 50px;
 }
-
 .navigation{
     padding: 10%;
     color:whitesmoke;
     margin: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif; 
-    justify-content: space-around;
+    justify-content: space-between;
+    text-align: left;
 }
 #main-content{
     text-align: justify;
     background-color: rgb(247, 242, 235);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
-/*.content-columns{
-color: blueviolet;
-gap: 30px;
-padding:30px
-}
-.content-card{
-    flex:1;
-    border-radius: 15px;
-    justify-content: center;
-}*/
 .content-columns {
     display: flex;
-    justify-content: center; 
+    justify-content: space-between; 
     gap: 50px; 
-    padding: 30px; 
+    padding: 30px;
+    max-width: fit-content;
 }
 
 .content-card {
@@ -46,14 +36,31 @@ padding:30px
     max-width: 45vw; 
     background-color: #ffffff; 
     border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     height: 80%;
     padding: 25px;
 }
 
+.content-card, .profile-picture {
+    transition: all 0.2s ease-out;
+}
+
+#contact-info{
+    font-family: sans-serif;
+    justify-content:space-around;
+    text-align: center;
+    height: auto;
+}
 
 @media (max-width: 768px) {
     .content-columns {
         flex-direction: column; /*pon las columnas a una al lado de la otra*/
         align-items: center; /* Centra las columnas*/
+    }
+}
+@media (max-width: 768px) {
+    #main-header {
+        flex-direction: column;
+        align-items: center;
     }
 }
